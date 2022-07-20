@@ -1,0 +1,22 @@
+.fie{
+    margin-left: 150px;
+}
+.details{
+    text-align: center;
+}
+.title{
+    font-size: 40px;
+}
+.button{
+    margin: 5px;
+    color: #333;
+    box-shadow: -3px 3px grey, -3px 3px grey, -3px 3px grey;
+    border: 1px solid grey
+}
+.text{
+    position: relative;
+}
+label{
+    width: 100px;
+    display: inline-block;
+}
