@@ -122,10 +122,62 @@ app.get('/home',async(req,resp)=>{
 
     }
 })
+app.get('/home/search/:id',async(req,resp)=>{
+    try{
+        let data3 = await Contacts.findById(req.params.id);
+        
+        resp.send(data3)
+        
+
+
+
+    }
+    catch(err){
+        console.log(err)
+
+    }
+})
+app.patch('/home/:id',async(req,res)=>{
+    try{
+        let data1= await Contacts.findById(req.params.id);
+        data1.Name=req.body.Name;
+        data1.Date_of_Birth=req.body.Date_of_Birth;
+        data1.Address=req.body.Address;
+        data1.City=req.body.City;
+        data1.Pincode=req.body.Pincode;
+        data1.Mobile =req.body.Mobile;
+        let data2= await data1.save();
+        res.json(data2);
+        
+
+
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+})
+app.patch('/home/delete/:id',async(req,res)=>{
+    try{
+        let data1= await Contacts.findById(req.params.id);
+        
+        data1.Is_Deleted = req.body.Is_Deleted;
+        let data2= await data1.save();
+        res.json(data2);
+        
+
+
+    }
+    catch(err)
+    {
+        console.log(err)
+    }
+})
+
 /*app.delete('/delete',async(req,resp)=>{
 app.update/de
 try{
-    
+
 }
     try{
          let 
