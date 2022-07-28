@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+  background-color: pink;
+  font-style:italic;
+}
+.table{
+  border: 2px ridge black;
+  width: 93%;
+  margin: 30px;
+  padding: 15px;
+}
+.tableheader{
+  background-color: rgb(176, 163, 163);
+}
+ tr:nth-child(even) {background-color: #f2f2f2;} 
+td{
+  border: 1px ridge black
+}
+.searchButton{
+  align-items: center;
+  margin-left: 550px;
+}
+.seacrhBar{
+  width: 87%;
+  padding: 12px 20px;
+  margin: 8px 10px;
+  margin-left: 30px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.AddBar{
+  width: 87%;
+  padding: 12px 20px;
+  margin: 8px 10px;
+  margin-left: 80px;
+  display: inline-block;
+  border: 1.5px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.AddBar2{
+  width: 95%;
+  padding: 12px 20px;
+  margin: 8px 10px;
+  margin-left: 30px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.AddStyle{
+  display:inline-block;
+        margin:80px;
+        margin-left: 425px;
+        height:350px;
+        width:400px;
+        padding:0px;
+        text-align:center;
+        background-color:"#FFF";
+        /* -webkit-filter: drop-shadow(0px 0px 5px #555);
+        filter: drop-shadow(0px 0px 5px #555); */
+
+}
+.addstyle2{
+  border: 2px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgb(176, 163, 163);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+}
+.tablebutton{
+  background-color: rgb(187, 174, 174) ;
+  color: black;
+  margin-right: 10px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px outset black;
+}
+.tablebutton2{
+  background-color: rgb(187, 174, 174) ;
+  color: black;
+  padding: 5px 5px;
+  border: none;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px outset black;
+}
+.addbuttonsave{
+  margin-left: 450px;
+}
+button{
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(187, 174, 174);
+  border: 1px outset black;
+}
+
