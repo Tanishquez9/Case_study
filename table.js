@@ -71,6 +71,14 @@ const Table =()=>{
       })
     })
   }
+  function TestsFunction() {
+    var T = document.getElementById("TestsDiv");
+    T.style.display = "block";  
+}
+function HideEdit(){
+  var a= document.getElementById("TestsDiv");
+  a.style.display="none";
+}
 
     return(
       <div>
@@ -88,10 +96,10 @@ const Table =()=>{
           <tr className="tableheader">
             <td>ID</td>
             <td>Name</td>
-            <td>Date_Of_Birth</td>
+            <td>Date Of Birth</td>
             <td>Address</td>
             <td>City</td>
-            <td>PinCode</td>
+            <td>Pincode</td>
             <td>Mobile</td>
             <td>Operations</td>
           </tr>
@@ -105,21 +113,28 @@ const Table =()=>{
                 <td>{item.city}</td>
                 <td>{item.pincode}</td>
                 <td>{item.mobile}</td>
-                <td><button onClick={() => deleteUser(item.id)}>Delete</button>
-                <button  onClick={() => selectUser(item.id)}>Edit</button></td>
+                <td><button className="buttonstyle" onClick={() => deleteUser(item.id)}>Delete</button>
+                <div onClick={TestsFunction}><button className="buttonstyle" onClick={() => selectUser(item.id)}>Edit</button></div>
+                </td>
               </tr>
             )
           }
         </tbody>
       </table>
-      <div id="editpage">
-      <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}} /> <br /><br />
-      <input type="text" value={dateofbirth} onChange={(e)=>{setDateofbirth(e.target.value)}} /> <br /><br />
-        <input type="text" value={address} onChange={(e)=>{setAddress(e.target.value)}} /> <br /><br />
-        <input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}} /> <br /><br />
-        <input type="text" value={pincode} onChange={(e)=>{setPincode(e.target.value)}} /> <br /><br />
-        <input type="text" value={mobile}  onChange={(e)=>{setMobile(e.target.value)}} /> <br /><br />
-        <button onClick={updateUser} >Update User</button>
+      <div id="TestsDiv" className="AddBar">
+        <p className="textStyle">Name:</p>
+      <input type="text"  className="AddBar2" value={name} onChange={(e)=>{setName(e.target.value)}} /> <br /><br />
+      <p className="textStyle">Date of Birth:</p>
+      <input type="text"  className="AddBar2" value={dateofbirth} onChange={(e)=>{setDateofbirth(e.target.value)}} /> <br /><br />
+      <p className="textStyle">Address:</p>
+        <input type="text"  className="AddBar2" value={address} onChange={(e)=>{setAddress(e.target.value)}} /> <br /><br />
+        <p className="textStyle">City:</p>
+        <input type="text"  className="AddBar2" value={city} onChange={(e)=>{setCity(e.target.value)}} /> <br /><br />
+        <p className="textStyle">Pincode:</p>
+        <input type="text"  className="AddBar2" value={pincode} onChange={(e)=>{setPincode(e.target.value)}} /> <br /><br />
+        <p className="textStyle">Mobile Number:</p>
+        <input type="text"  className="AddBar2" value={mobile}  onChange={(e)=>{setMobile(e.target.value)}} /> <br /><br />
+        <div onClick={HideEdit}><button className="tablebutton3" onClick={updateUser} >Update User</button></div>
       </div>
     </div>   
     </div>  

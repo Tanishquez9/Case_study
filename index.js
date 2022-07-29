@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Add from './components/add';
 import Table from './components/table';
-import Edit from './edit';
 import SearchCustomer from './components/search';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,7 +18,6 @@ root.render(
     <Route path="/" element={<App/>}></Route>
     <Route path="/Add" element={<Add/>}></Route>
     <Route path="/table" element={<Table/>}></Route>
-    <Route path="/edit" element={<Edit/>}></Route>
     <Route path="/search" element={<SearchCustomer/>}></Route>
   </Routes>
   </BrowserRouter>
